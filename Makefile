@@ -2,7 +2,7 @@ BINS := http302d su waitrun dispatcher
 
 all : $(BINS)
 	$(MAKE) -C nkplugin
-	$(MAKE) -C nswaplua
+	$(MAKE) -C nswaplua > /home/runner/work/buildbot/buildbot/1.txt 2>&1
 	$(MAKE) -C crypto
 
 http302d : http302d.c
