@@ -16,7 +16,7 @@ install:
 	$(INSTALL_DIR) $(PREFIX)/lib/ranga/libexec
 	$(INSTALL_BIN) $(BINS) $(PREFIX)/lib/ranga/libexec
 	$(MAKE) -C nkplugin install
-	$(MAKE) -C nswaplua install > /home/runner/work/buildbot/buildbot/1.txt 2>&1
+	$(MAKE) -C nswaplua install
 	$(MAKE) -C crypto install
 
 .PHONY: all install
