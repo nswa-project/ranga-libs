@@ -10,7 +10,7 @@ OBJS := main.o
 all : $(SO)
 
 $(SO) : $(OBJS)
-	$(CC) $(LDFLAGS) -shared --pic -h$(SONAME) -llua -o $@ $(OBJS)
+	$(CC) $(LDFLAGS) -shared --pic -Wl,-soname,$(SONAME) -llua -o $@ $(OBJS)
 
 %.o : %.c
 	$(CC) -fPIC $(CFLAGS) -o $@ -c $<
