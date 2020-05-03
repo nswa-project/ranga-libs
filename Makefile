@@ -2,6 +2,7 @@ BINS := http302d su waitrun dispatcher
 
 all : $(BINS)
 	$(MAKE) -C nkplugin
+	$(MAKE) -C scplugin
 	$(MAKE) -C nswaplua
 	$(MAKE) -C crypto
 
@@ -16,6 +17,7 @@ install:
 	$(INSTALL_DIR) $(PREFIX)/lib/ranga/libexec
 	$(INSTALL_BIN) $(BINS) $(PREFIX)/lib/ranga/libexec
 	$(MAKE) -C nkplugin install
+	$(MAKE) -C scplugin install
 	$(MAKE) -C nswaplua install
 	$(MAKE) -C crypto install
 
