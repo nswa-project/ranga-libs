@@ -26,6 +26,9 @@ void error __P((char *, ...));	/* log an error message */
 void fatal __P((char *, ...));	/* log an error message and die(1) */
 extern int (*pap_check_hook) __P((void));
 extern int (*chap_check_hook) __P((void));
+extern int (*pap_auth_hook) __P((char *user, char *passwd, char **msgp,
+				 struct wordlist **paddrs,
+				 struct wordlist **popts));
 
 #define RANGA_LIBEXEC "/lib/ranga/libexec/scdial"
 
